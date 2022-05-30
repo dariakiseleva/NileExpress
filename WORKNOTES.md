@@ -16,3 +16,7 @@
 - Review what `flex: 1` does - stretches as big as it can go
 - `{Array(rating).fill().map((_, i) => (<p>⭐</p>))}`
 - React context API/redux: we push things into the data layer and from there into basket. A reducer is how the data is dispatched into the data layer.
+
+## Holding
+
+- The basket contents refresh when page is refreshed - what do?
