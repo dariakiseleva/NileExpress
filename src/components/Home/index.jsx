@@ -11,7 +11,6 @@ export default function Home() {
         
         <img 
           className="home__image"
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Blue_to_purple_gradient_header.png"
           src="https://m.media-amazon.com/images/I/61KtzEF0wzL._SX3000_.jpg" 
           alt="" 
         />

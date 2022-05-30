@@ -2,13 +2,15 @@ import React from 'react'
 import "./header.scss";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
     <div className="header">
         {/* LOGO */}
-        <div className="header__logo">NileExpress</div>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+            <div className="header__logo">NileExpress</div>
+        </Link>
 
         {/* SEARCH */}
         <div className="header__search">
@@ -30,10 +32,12 @@ export default function Header() {
                 <span className="header__optionLineTwo">Prime</span>
             </div>
 
-            <div className="header__optionBasket">
-                <ShoppingBasketIcon />
-                <span className="header__optionLineTwo header__basketCount">0</span>
-            </div>
+            <Link to="/checkout" style={{ textDecoration: 'none' }}>
+                <div className="header__optionBasket">
+                    <ShoppingBasketIcon />
+                    <span className="header__optionLineTwo header__basketCount">0</span>
+                </div>
+            </Link>
         </div>
 
     </div>

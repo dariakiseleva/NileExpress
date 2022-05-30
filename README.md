@@ -76,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - storybook
 - Material UI: @mui/material, @emotion/react, @emotion/styled, @mui/icons-material
 - react-router-dom
+- react-currency-format

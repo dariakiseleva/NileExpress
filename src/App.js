@@ -13,23 +13,16 @@ function App() {
     <Router>
       <div className="App">
 
+        {/* The header is rendered on all pages, so placed outside of Routes*/}
+        <Header />
+
         <Routes>
 
           {/* Checkout route */}
-          <Route path="/checkout" element={
-            <>
-              <Header />
-              <Checkout />
-            </>
-          } />
+          <Route path="/checkout" element={<Checkout />} />
 
           {/* Homepage route */}
-          <Route path="/" element={
-            <>
-              <Header />
-              <Home />
-            </>
-          } />
+          <Route path="/" element={<Home />} />
 
         </Routes>
 
