@@ -1,0 +1,48 @@
+
+@import "./../../variables.scss";
+
+.header {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    height: 65px;
+    position: sticky;
+    top: 0px;
+    z-index: 100px;
+
+    background-color: $nav-background;
+}
+
+
+.header__logo {
+    font-family: 'Roboto';
+    font-size: 50px;
+    color: rgb(73, 11, 131);
+}
+
+// .header__logo {
+//     height: 50px;
+//     object-fit: contain;
+// }
+
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: red;
+}
