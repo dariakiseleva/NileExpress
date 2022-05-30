@@ -12,6 +12,7 @@ export default function Home() {
         <img 
           className="home__image"
           src="https://m.media-amazon.com/images/I/61KtzEF0wzL._SX3000_.jpg" 
+          src="https://images-na.ssl-images-amazon.com/images/G/15/kindle/journeys/Zjc1NTA4OGMt/Zjc1NTA4OGMt-MWFmZWRlOTQt-w3000._CB649606900_.jpg"
           alt="" 
         />
 

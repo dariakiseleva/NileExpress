@@ -3,9 +3,13 @@ import "./header.scss";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../../StateProvider';
 
 export default function Header() {
-  return (
+
+    const [{basket}, dispatch] = useStateValue();
+
+    return (
     <div className="header">
         {/* LOGO */}
         <Link to="/" style={{ textDecoration: 'none' }}>
@@ -35,11 +39,11 @@ export default function Header() {
             <Link to="/checkout" style={{ textDecoration: 'none' }}>
                 <div className="header__optionBasket">
                     <ShoppingBasketIcon />
-                    <span className="header__optionLineTwo header__basketCount">0</span>
+                    <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                 </div>
             </Link>
         </div>
 
     </div>
-  )
+    )
 }
