@@ -3,29 +3,27 @@
 
 .header {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+
+    padding: 0 20px;
 
     height: 65px;
     position: sticky;
     top: 0px;
-    z-index: 100px;
+    z-index: 100;
 
     background-color: $nav-background;
+
 }
 
 
 .header__logo {
-    font-family: 'Roboto';
-    font-size: 50px;
+    font-family: 'Fredoka One';
+    font-size: 40px;
     color: rgb(73, 11, 131);
 }
-
-// .header__logo {
-//     height: 50px;
-//     object-fit: contain;
-// }
 
 .header__search {
     display: flex;
@@ -45,4 +43,32 @@
     padding: 5px;
     height: 22px !important;
     background-color: red;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+
+    .header__optionLineOne {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .header__optionLineTwo {
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
