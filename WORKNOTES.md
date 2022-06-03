@@ -12,6 +12,7 @@
   - Test ideas: Items in basket are added correctly (the data layer...)
 - [ ] Not sure what to do with the index.css defaults, maybe delete later
 - [ ] Come back to storybook - learn to set it up properly etc.
+- [ ] Deploy to Netlify (come back)
 
 ## Notes
 

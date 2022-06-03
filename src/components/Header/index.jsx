@@ -23,14 +23,19 @@ export default function Header() {
         </div>
         {/* NAVIGATION */}
         <div className="header__nav">
-            <div className="header__option">
-                <span className="header__optionLineOne">Hello user</span>
-                <span className="header__optionLineTwo">Sign in</span>
-            </div>
+
+            <Link to="/login" style={{ textDecoration: 'none' }}>
+                <div className="header__option">
+                    <span className="header__optionLineOne">Hello user</span>
+                    <span className="header__optionLineTwo">Sign in</span>
+                </div>
+            </Link>
+
             <div className="header__option">
                 <span className="header__optionLineOne">Returns</span>
                 <span className="header__optionLineTwo">& Orderes</span>
             </div>
+
             <div className="header__option">
                 <span className="header__optionLineOne">Your</span>
                 <span className="header__optionLineTwo">Prime</span>

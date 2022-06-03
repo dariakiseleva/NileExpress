@@ -7,22 +7,33 @@ import './App.scss';
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Checkout from "./components/Checkout"
+import Login from "./components/Login"
 
 function App() {
   return (
     <Router>
       <div className="App">
 
-        {/* The header is rendered on all pages, so placed outside of Routes*/}
-        <Header />
-
         <Routes>
 
           {/* Checkout route */}
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={
+            <>
+              <Header />
+              <Checkout />
+            </>
+          } />
+
+           {/* Login route */}
+           <Route path="/login" element={<Login />} />
 
           {/* Homepage route */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={
+            <>
+              <Header />
+              <Home />
+            </>
+          } />
 
         </Routes>
 
