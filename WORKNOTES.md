@@ -1,3 +1,7 @@
+## Homework
+
+- Show item # in checkout and the total price
+
 ## Resources
 
 - **Tutorial:** https://youtu.be/RDV3Z1KCBvo
@@ -16,6 +20,7 @@
 - Review what `flex: 1` does - stretches as big as it can go
 - `{Array(rating).fill().map((_, i) => (<p>⭐</p>))}`
 - React context API/redux: we push things into the data layer and from there into basket. A reducer is how the data is dispatched into the data layer.
+- Good practice to have the selector within the reducer
 
 ## Holding
 

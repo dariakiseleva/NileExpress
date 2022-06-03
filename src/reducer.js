@@ -14,4 +14,9 @@ const reducer = (state, action) => {
     }
 }
 
+export const getBasketTotal = (basket) => {
+    // Optional chaining in case basket is empty
+    return basket?.reduce((amount, item) => item.price + amount, 0);
+}
+
 export default reducer;

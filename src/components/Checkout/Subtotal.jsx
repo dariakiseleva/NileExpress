@@ -1,14 +1,19 @@
-import React, {fragment} from 'react';
 import "./subtotal.scss";
-
+import React, {fragment} from 'react';
+import { useStateValue } from '../../StateProvider';
 import CurrencyFormat from 'react-currency-format';
+import { getBasketTotal } from "../../reducer";
 
 function Subtotal() {
+
+    const [{basket}, dispatch] = useStateValue();
 
     const renderText = (value) => {
         return (
             <p>
-                Subtotal (0 items): <strong>0</strong>
+                {/* Pull number of items and total price from the data layer */}
+                Subtotal ({basket.length} {basket.length===1 ? "item" : "items"}):         
+                <strong> {value}</strong>
             </p>
         )
     }
@@ -18,9 +23,9 @@ function Subtotal() {
     <div className="subtotal">
 
         <CurrencyFormat 
-            renderText={renderText}
             decimalScale={2} 
-            value={0}
+            value={getBasketTotal(basket)}
+            renderText={(value) => renderText(value)}
             displayType={"text"}
             thousandSeparator={true}
             prefix={"$"}
