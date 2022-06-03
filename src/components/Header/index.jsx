@@ -5,9 +5,21 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 
+//For some reason the shorthand did not work?
+import firebaseData from "./../../firebase";
+const {db, auth} = firebaseData;
+
+
 export default function Header() {
 
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket, user}, dispatch] = useStateValue();
+
+    const progressToAuthentication = () => {
+        //If a user was logged in, sign out on click
+        if (user) {
+            auth.signOut()
+        }
+    }
 
     return (
     <div className="header">
@@ -24,16 +36,17 @@ export default function Header() {
         {/* NAVIGATION */}
         <div className="header__nav">
 
-            <Link to="/login" style={{ textDecoration: 'none' }}>
-                <div className="header__option">
-                    <span className="header__optionLineOne">Hello user</span>
-                    <span className="header__optionLineTwo">Sign in</span>
+             {/* NOTE: The link only transitions if no user is logged in */}
+            <Link to={!user && "/login"} style={{ textDecoration: 'none', color: 'black' }}>
+                <div className="header__option" onClick={progressToAuthentication}>
+                    <span className="header__optionLineOne">Hello {user ? user.email : 'guest'}</span>
+                    <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
             </Link>
 
             <div className="header__option">
                 <span className="header__optionLineOne">Returns</span>
-                <span className="header__optionLineTwo">& Orderes</span>
+                <span className="header__optionLineTwo">& Orders</span>
             </div>
 
             <div className="header__option">

@@ -4,7 +4,6 @@ import { Link, useNavigate  } from 'react-router-dom';
 
 //For some reason the shorthand did not work?
 import firebaseData from "./../../firebase";
-import { HistoryOutlined } from "@mui/icons-material";
 const {db, auth} = firebaseData;
 
 function Login() {
@@ -22,8 +21,7 @@ function Login() {
         auth
         .signInWithEmailAndPassword(email, password)
         .then((auth) => {
-            console.log(auth)
-            //If authentication is not empty
+            //If authentication is successful (auth exists)
             if(auth) {
                 //On successful login, transition to the homepage
                 navigate('/')
@@ -41,7 +39,6 @@ function Login() {
         auth
         .createUserWithEmailAndPassword(email, password)
         .then((auth) => {
-            console.log(auth)
             if(auth) {
                 navigate('/')
             }
