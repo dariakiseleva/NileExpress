@@ -1,8 +1,14 @@
 import "./login.scss"
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
+
+//For some reason the shorthand did not work?
+import firebaseData from "./../../firebase";
+import { HistoryOutlined } from "@mui/icons-material";
+const {db, auth} = firebaseData;
 
 function Login() {
+    const navigate = useNavigate();
 
     //States to store user input
     const [email, setEmail] = useState("");
@@ -12,13 +18,35 @@ function Login() {
     const signIn = (e) => {
         //Prevent prefresh on clicking button
         e.preventDefault()
-        //Firebase login....
+        //Firebase login
+        auth
+        .signInWithEmailAndPassword(email, password)
+        .then((auth) => {
+            console.log(auth)
+            //If authentication is not empty
+            if(auth) {
+                //On successful login, transition to the homepage
+                navigate('/')
+            }
+        })
+        //This displays the alert on the screen
+        .catch((error) => alert(error.message));
     }
 
     //Handle registration when button is clicked
     const register = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+
         //Firebase register
+        auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            console.log(auth)
+            if(auth) {
+                navigate('/')
+            }
+        })
+        .catch((error) => alert(error.message));
     }
     
 
