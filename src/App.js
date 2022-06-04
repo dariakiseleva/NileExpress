@@ -2,8 +2,8 @@
 import './App.scss';
 
 //Import functionalities
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import React, {useEffect} from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
 // Import components
@@ -11,6 +11,7 @@ import Header from "./components/Header"
 import Home from "./components/Home"
 import Checkout from "./components/Checkout"
 import Login from "./components/Login"
+import Payment from "./components/Payment"
 
 //Import helpers
 import { useStateValue } from './StateProvider';
@@ -56,6 +57,15 @@ function App() {
             <>
               <Header />
               <Checkout />
+            </>
+          } />
+
+
+          {/* Checkout route */}
+          <Route path="/payment" element={
+            <>
+              <Header />
+              <Payment />
             </>
           } />
 

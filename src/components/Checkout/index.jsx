@@ -1,4 +1,6 @@
 import React from 'react'
+import FlipMove from 'react-flip-move';
+
 import "./checkout.scss"
 
 import Subtotal from "./Subtotal";
@@ -23,9 +25,7 @@ export default function Checkout() {
                 price={item.price}
                 rating={item.rating}
               />
-
             ))}
-
 
         </div>
 

@@ -5,7 +5,6 @@ export const initialState = {
 
 const reducer = (state, action) => {
     switch(action.type) {
-
         //ACTION TO REMOVE FROM BASKET
         case 'REMOVE_FROM_BASKET':
             //Find the first item with the id of the item to delete

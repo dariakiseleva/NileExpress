@@ -1,0 +1,34 @@
+.payment {
+
+    margin-top: 30px;
+    
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    background-color: white;
+
+    h1 {
+        border-bottom: 1px solid lightgrey; 
+        padding: 10px 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.payment__section {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.payment__title {
+    flex: 0.2;
+}
+
+.payment__address, .payment__items {
+    flex: 0.8;
+}

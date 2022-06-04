@@ -4,7 +4,7 @@
 
 ## Resources
 
-- **Tutorial:** https://youtu.be/RDV3Z1KCBvo
+- **Tutorial:** https://youtu.be/RDV3Z1KCBvo (stopped at 5:13)
 
 ## Process
 
@@ -13,6 +13,7 @@
 - [ ] Not sure what to do with the index.css defaults, maybe delete later
 - [ ] Come back to storybook - learn to set it up properly etc.
 - [ ] Deploy to Netlify (come back)
+- [ ] Upon refreshing while signed in, the basket gets empty.
 
 ## Notes
 
@@ -22,6 +23,7 @@
 - `{Array(rating).fill().map((_, i) => (<p>⭐</p>))}`
 - React context API/redux: we push things into the data layer and from there into basket. A reducer is how the data is dispatched into the data layer.
 - Good practice to have the selector within the reducer
+- useNavigate vs. Link. useNavigate keeps the styling of the button while still doing a redirect (useHistory is an older version of this)
 
 ## Holding
 

@@ -25,7 +25,7 @@ export default function Header() {
     <div className="header">
         {/* LOGO */}
         <Link to="/" style={{ textDecoration: 'none' }}>
-            <div className="header__logo">TestTitle</div>
+            <div className="header__logo">NileExpress</div>
         </Link>
 
         {/* SEARCH */}
