@@ -4,7 +4,7 @@
 
 ## Resources
 
-- **Tutorial:** https://youtu.be/RDV3Z1KCBvo (stopped at 5:13)
+- **Tutorial:** https://youtu.be/RDV3Z1KCBvo (stopped at 5:44)
 
 ## Process
 
@@ -24,6 +24,8 @@
 - React context API/redux: we push things into the data layer and from there into basket. A reducer is how the data is dispatched into the data layer.
 - Good practice to have the selector within the reducer
 - useNavigate vs. Link. useNavigate keeps the styling of the button while still doing a redirect (useHistory is an older version of this)
+- Don't need stripe blaze account from express server?
+- history.push vs. history.replace - with the latter you can not come back to that back. How to do the same with navigate? (on payment page which goes to orders)
 
 ## Holding
 

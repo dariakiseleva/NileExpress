@@ -71,6 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Dependencies
 
+- axios
 - firebase
 - sass-loader, sass
 - storybook
@@ -78,3 +79,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - react-router-dom
 - react-currency-format
 - react-flip-move
+- @stripe/stripe-js
+- @stripe/react-stripe-js

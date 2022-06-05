@@ -4,7 +4,8 @@ import './App.scss';
 //Import functionalities
 import React, {useEffect} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
 
 // Import components
 import Header from "./components/Header"
@@ -18,6 +19,13 @@ import { useStateValue } from './StateProvider';
 //For some reason the shorthand did not work?
 import firebaseData from "./firebase";
 const {db, auth} = firebaseData;
+
+
+//This is a public key which does not need to be hidden
+const promise = loadStripe('pk_test_51L77UxF0wKL9RjqmQqU3DjvIBklXfyXcKUZtqdDyL9mr65sHqFSIZaEm60RKoPpj0fiSNZRhyNxNc9sfiGCjIBHR001bwNWK9H');
+
+
+
 
 function App() {
 
@@ -65,7 +73,9 @@ function App() {
           <Route path="/payment" element={
             <>
               <Header />
-              <Payment />
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
             </>
           } />
 
