@@ -26,6 +26,7 @@
 - useNavigate vs. Link. useNavigate keeps the styling of the button while still doing a redirect (useHistory is an older version of this)
 - Don't need stripe blaze account from express server?
 - history.push vs. history.replace - with the latter you can not come back to that back. How to do the same with navigate? (on payment page which goes to orders)
+- Request query instead of params/data...
 
 ## Holding
 

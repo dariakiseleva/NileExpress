@@ -2,6 +2,10 @@ import './payment.scss';
 
 //Importing the instance of axios we created, not normal one
 import axios from '../../axios';
+
+//Using the normal one and specifying here
+//import axios from 'axios';
+
 import React, {useState, useEffect} from 'react'
 import {useStateValue} from "./../../StateProvider";
 import { Link, useNavigate } from "react-router-dom";
@@ -32,16 +36,15 @@ function Payment() {
 
     const getClientSecret = async () => {
       //Make a call to stripe to create new secret
-      const response = await axios (
+      const response = await axios(
         {
           method: 'post',
           //stripe expects total in a currencies subunit (here in cents since using dollars)
-          url: `payments/create?total=${getBasketTotal(basket) * 100}`
+          //request query after ?
+          url: `payments/create?total=${(getBasketTotal(basket) * 100)}`
       })
       setClientSecret(response.data.clientSecret);
-
     }
-
     //Running an async function inside useEffect
     getClientSecret();
 
@@ -65,7 +68,7 @@ function Payment() {
       setSucceeded(true)
       setError(null)
       setProcessing(false)
-      navigate("/") // Change this to orders later
+      navigate("/orders") // Redirect to orders
     })
   }
 
