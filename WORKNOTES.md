@@ -1,10 +1,8 @@
-## Homework
 
-- Show item # in checkout and the total price
-
-## Resources
+## Links
 
 - **Tutorial:** https://youtu.be/RDV3Z1KCBvo (stopped at 5:44)
+- Hosted: https://ecommerce-81161.web.app/
 
 ## Process
 
